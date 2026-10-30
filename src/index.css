@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palet brand Bakso Rahimsyah 95 */
+  --color-cream: #fff4f8;
+  --color-pink-soft: #f5a5cc;
+  --color-pink-mid: #f07fb4;
+  --color-pink-hot: #e84a93;
+  --color-pink-deep: #b81f6e;
+  --color-blue-soft: #65b8ef;
+  --color-blue-mid: #3fa0e8;
+  --color-blue-deep: #1b7cc9;
+  --color-blue-ink: #0e5a94;
+  --color-ink: #33203a;
+  --color-wa: #25d366;
+  --color-wa-dark: #1fb857;
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --animate-marquee: marquee 26s linear infinite;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-float-slow: float 7.5s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-pink-soft);
+  color: var(--color-ink);
+}
